@@ -82,9 +82,9 @@ checkTextContent(text);
   };
 console.log(man);
 
-const введенныйПароль = "Az.11152007"; 
+const vpass = "Az.11152007"; 
 
-if (введенныйПароль === man.пароль) {
+if (vpass === man.пароль) {
   console.log(`Добро пожаловать, ${man.name} ${man.famile}. Ваш логин ${man.login}`);
 } else {
   console.log(`Указанный пароль ${введенныйПароль} не верен. Попробуйте еще раз`);

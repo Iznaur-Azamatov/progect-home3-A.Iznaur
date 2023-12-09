@@ -1,25 +1,30 @@
-//1 ЗАДАНИЕ
-// let arr1= [101, 202, 303, 404, 505];
-// let arr2 = [606, 707, 808, 909];
-// let superArr = arr_1.concat(arr_2);
-// console.log(superArr);
-//2 задание
-// let arr1= [101, 202, 303, 404, 505];
-// let arr2 = [606, 707, 808, 909];
-// let superArr = arr_1.concat(arr_2);
-// console.log(Math.min(...superArr));
-// 3 задание
-// let obj = { 
-//   width: 300,
-//   height: 550
-// };
-// let newObj = {...obj};
-// newObj.area = function() {
-//   return this.width * this.height;
-// };
+let big = document.getElementById('big');
+let item_1 = document.getElementById('item-1');
+let item_2 = document.getElementById('item-2');
+let item_3 = document.getElementById('item-3');
 
-// console.log(newObj.area());
-// function sum(...sumArr) {
-//   return sumArr.reduce((acc, cur) => acc + cur,);
-// }
-// console.log(sum(1, 2, 3, 4, 5)); 
+
+item_1.onclick = active;
+item_2.onclick = active;
+item_3.onclick = active;
+
+item_1.addEventListener('click', changeContent)
+item_2.addEventListener('click', changeContent)
+item_3.addEventListener('click', changeContent)
+
+function active() {
+
+    item_1.classList.remove('active');
+    item_2.classList.remove('active');
+    item_3.classList.remove('active');
+
+    this.classList.toggle('active');
+}
+function changeContent() {
+    let src = this.firstElementChild.firstElementChild.src;
+   
+   
+    big.style.backgroundImage = `url(${src})`;
+
+}
+
